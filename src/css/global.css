@@ -1,0 +1,44 @@
+body{
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 1226px;
+    color:#333;
+}
+.container{
+    margin: 0 auto;
+    width: 1226px;
+}
+.ellipsis-single-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellipsis-mulit-line{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    -webkit-box-orient: vertical; /* 多行 */
+    -webkit-line-clamp: 2; /* 显示行数 */
+}
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-position-absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

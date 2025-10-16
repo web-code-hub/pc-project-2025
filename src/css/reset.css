@@ -1,0 +1,14 @@
+html,body,ul,p,input,button{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #B0B0B0 ;
+}
+ul,li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
