@@ -373,6 +373,7 @@
   height: 460px; /* 固定高度 */
   background-color: bisque; /* 背景色 */
   position: relative; /* 相对定位 */
+  z-index: -1;
 }
 
 /* Swiper容器 */
@@ -383,7 +384,9 @@
   /* 设置按钮大小 */
   --swiper-navigation-size: 31px;
 }
-
+.swiper a {
+  display: block;
+}
 /* Swiper左导航按钮 */
 .swiper .swiper-button-prev {
   left: 244px; /* 距离左侧位置 */
@@ -536,8 +539,8 @@
   display: flex;
   column-gap: 26px;
 }
-.music-recommend .music-content .music-content-item ul li{
-    width: 224px;
+.music-recommend .music-content .music-content-item ul li {
+  width: 224px;
 }
 .music-recommend .music-content .music-content-item ul li .img {
   position: relative;
@@ -601,3 +604,324 @@
   cursor: pointer;
 }
 /* end music-recommend */
+/* product start */
+/* 产品区域标题栏样式 */
+.product .product-header {
+  display: flex; /* 使用弹性布局 */
+  justify-content: space-between; /* 子元素两端对齐 */
+  padding-top: 28px; /* 顶部内边距 */
+  margin-bottom: 29px; /* 底部外边距 */
+}
+
+/* 产品区域主标题样式 */
+.product .product-header h3 {
+  font-size: 24px; /* 字体大小 */
+  font-weight: bold; /* 字体粗细 */
+  margin-bottom: 10px; /* 底部外边距 */
+}
+
+/* 产品区域副标题样式 */
+.product .product-header p {
+  font-size: 14px; /* 字体大小 */
+  max-width: 826px; /* 最大宽度 */
+}
+
+/* 更多按钮样式 */
+.product-header-more {
+  width: 118px; /* 宽度 */
+  height: 42px; /* 高度 */
+  line-height: 42px; /* 行高 */
+  text-align: center; /* 文字居中 */
+  border: 1px solid rgba(186, 186, 186, 0.3); /* 边框样式 */
+  border-radius: 20px; /* 圆角 */
+  margin-top: 18px; /* 顶部外边距 */
+}
+
+/* 更多按钮链接样式 */
+.product-header-more a {
+  color: #000; /* 字体颜色 */
+}
+
+/* 更多按钮悬停效果 */
+.product-header-more:hover {
+  border-color: #000; /* 边框颜色 */
+  cursor: pointer; /* 鼠标手型 */
+}
+
+/* 产品内容区域网格布局 */
+.product .product-content {
+  /* min-height: 710px; 最小高度 */
+  display: grid; /* 使用网格布局 */
+  grid-template-columns: 610px repeat(2, 295px); /* 列宽定义 */
+  grid-template-rows: 295px 85px 295px; /* 行高定义 */
+  gap: 20px 13px; /* 网格间距 */
+  grid-template-areas: /* 网格区域定义 */
+    "a b c"
+    "a d c"
+    "a d e";
+}
+
+/* 为每个产品内容项分配网格区域 */
+.product .product-content .product-content-item:nth-child(1) {
+  grid-area: a; /* 第一个元素占据区域a */
+}
+
+.product .product-content .product-content-item:nth-child(2) {
+  grid-area: b; /* 第二个元素占据区域b */
+}
+
+.product .product-content .product-content-item:nth-child(3) {
+  grid-area: c; /* 第三个元素占据区域c */
+}
+
+.product .product-content .product-content-item:nth-child(4) {
+  grid-area: d; /* 第四个元素占据区域d */
+}
+
+.product .product-content .product-content-item:nth-child(5) {
+  grid-area: e; /* 第五个元素占据区域e */
+}
+
+/* 产品内容项通用样式 */
+.product .product-content .product-content-item {
+  position: relative; /* 相对定位 */
+  cursor: pointer; /* 鼠标手型 */
+}
+
+/* 产品内容项上的点标记样式 */
+.product .product-content .product-content-item .dot {
+  position: absolute; /* 绝对定位 */
+  width: 32px; /* 宽度 */
+  height: 32px; /* 高度 */
+  display: none; /* 默认隐藏 */
+}
+
+/* 点标记的圆形样式 */
+.product .product-content .product-content-item .dot::before {
+  content: ""; /* 伪元素内容 */
+  width: 14px; /* 宽度 */
+  height: 14px; /* 高度 */
+  display: block; /* 块级显示 */
+  border: 9px solid rgba(0, 0, 0, 0.3); /* 边框 */
+  border-radius: 50%; /* 圆形 */
+  background: #fff; /* 背景色 */
+  background-clip: content-box; /* 背景裁剪 */
+  transition: transform ease 0.5s; /* 过渡效果 */
+}
+
+/* 鼠标悬停产品项时显示点标记 */
+.product .product-content .product-content-item:hover .dot {
+  display: block; /* 显示 */
+}
+
+/* 点标记悬停效果 */
+.product .product-content .product-content-item .dot:hover::before {
+  transform: scale(0.9); /* 缩放 */
+  box-shadow: 0 0 3px #fff; /* 阴影 */
+}
+
+/* 点标记提示信息样式 */
+.product .product-content .product-content-item .dot .dot-tipc {
+  position: absolute; /* 绝对定位 */
+  width: 150px; /* 宽度 */
+  background-color: #fff; /* 背景色 */
+  left: 41px; /* 左侧位置 */
+  top: 50%; /* 顶部位置 */
+  transform: translate3d(0, -50%, 0); /* 垂直居中 */
+  padding: 10px 0 6px 10px; /* 内边距 */
+  display: none; /* 默认隐藏 */
+}
+
+/* 点标记悬停时显示提示信息 */
+.product .product-content .product-content-item .dot:hover .dot-tipc {
+  display: block; /* 显示 */
+}
+
+/* 各个点标记的具体位置 */
+.product .product-content .product-content-item .dot1 {
+  left: 248px; /* 左侧位置 */
+  top: 249px; /* 顶部位置 */
+}
+
+.product .product-content .product-content-item .dot2 {
+  left: 128px;
+  top: 359px;
+}
+
+.product .product-content .product-content-item .dot3 {
+  left: 71px;
+  top: 460px;
+}
+
+.product .product-content .product-content-item .dot4 {
+  left: 53px;
+  top: 153px;
+}
+
+/* 提示信息内部元素样式 */
+.product .product-content .product-content-item .dot .dot-tipc .title {
+  font-weight: bold; /* 字体粗细 */
+}
+
+.product .product-content .product-content-item .dot .dot-tipc .price {
+  font-style: italic; /* 斜体 */
+}
+
+.product .product-content .product-content-item .dot .dot-tipc span {
+  font-size: 24px; /* 字体大小 */
+}
+/* end product */
+/* video-recommend start */
+/* 视频推荐区域整体样式 */
+.video {
+  margin-top: 40px;           /* 距离上方40px */
+  background-color: #f8f8f8;  /* 背景色 */
+}
+
+/* 视频推荐标题样式 */
+.video-recommend h2.video-title {
+  text-align: center;         /* 文本居中 */
+  font-size: 28px;            /* 字体大小 */
+  font-weight: bold;          /* 加粗 */
+  color: #000;                /* 黑色字体 */
+  line-height: 28px;          /* 行高 */
+  padding: 27px 0 33px 0;     /* 上左右下内边距 */
+}
+
+/* 视频列表容器 */
+.video-recommend .video-list ul {
+  display: flex;              /* 弹性布局 */
+  flex-wrap: wrap;            /* 允许换行 */
+  justify-content: space-between; /* 两端对齐 */
+  row-gap: 10px;              /* 行间距 */
+}
+
+/* 视频列表占位符 */
+.video-recommend .video-list ul span {
+  width: 303px;               /* 宽度 */
+}
+
+/* 视频列表项基础样式 */
+.video-recommend .video-list ul li {
+  width: 303px;               /* 宽度 */
+  height: 245px;              /* 高度 */
+  transition: box-shadow 0.5s; /* 阴影过渡效果 */
+}
+
+/* 视频列表项悬停效果 */
+.video-recommend .video-list ul li:hover {
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, .3); /* 添加阴影 */
+}
+
+/* 视频链接样式 */
+.video-recommend .video-list ul li a {
+  display: block;             /* 块级元素 */
+  width: 100%;                /* 宽度100% */
+  height: 100%;               /* 高度100% */
+}
+
+/* 视频内容区域 */
+.video-recommend .video-list ul li .video-content {
+  position: relative;         /* 相对定位 */
+  height: 190px;              /* 高度 */
+  cursor: pointer;            /* 手型光标 */
+}
+
+/* 视频内容遮罩层 */
+.video-recommend .video-list ul li .video-content::before {
+  content: "";                          /* 伪元素内容为空 */
+  position: absolute;                   /* 绝对定位 */
+  inset: 0;                             /* 四边为0 */
+  width: 303px;                         /* 宽度 */
+  height: 190px;                        /* 高度 */
+  background-color: rgba(0, 0, 0, 0);   /* 透明背景 */
+  transition: background-color 0.5s;    /* 背景色过渡 */
+}
+
+/* 视频内容悬停遮罩效果 */
+.video-recommend .video-list ul li .video-content:hover::before {
+  background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景 */
+}
+
+/* 视频播放图标 */
+.video-recommend .video-list ul li .video-content .icon {
+  font-size: 30px;            /* 字体大小 */
+  line-height: 1;             /* 行高 */
+  color: #fff;                /* 白色 */
+  position: absolute;         /* 绝对定位 */
+  right: 13px;                /* 距右13px */
+  bottom: 15px;               /* 距底15px */
+}
+
+/* 视频标题段落 */
+.video-recommend .video-list ul li P {
+  height: 55px;               /* 高度 */
+  line-height: 55px;          /* 行高 */
+  text-align: center;         /* 文本居中 */
+  background-color: #fff;     /* 白色背景 */
+  font-size: 16px;            /* 字体大小 */
+  color: #000;                /* 黑色字体 */
+}
+
+/* 视频弹窗遮罩层 */
+.video-mask {
+  position: fixed;                    /* 固定定位 */
+  inset: 0;                           /* 四边为0 */
+  width: 100%;                        /* 宽度100% */
+  height: 100%;                       /* 高度100% */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: none;                      /* 默认隐藏 */
+}
+
+/* 视频弹窗内容区域 */
+.video-mask .video-content {
+  position: absolute;                 /* 绝对定位 */
+  left: 50%;                          /* 距左50% */
+  top: 50%;                           /* 距顶50% */
+  transform: translate3d(-50%, -50%, 0); /* 居中 */
+  width: 1226px;                      /* 宽度 */
+  /* height: 500px; */                /* 高度(已注释) */
+  background-color: aqua;             /* 背景色(调试用) */
+}
+
+/* 视频元素样式 */
+.video-mask .video-content video {
+  width: 1226px;                      /* 宽度 */
+  position: relative;                 /* 相对定位 */
+  display: block;                     /* 块级元素 */
+}
+
+/* 视频关闭按钮 */
+.video-mask .video-content span.video-button {
+  position: absolute;                 /* 绝对定位 */
+  top: -10px;                         /* 距顶-10px */
+  right: -10px;                       /* 距右-10px */
+  width: 20px;                        /* 宽度 */
+  height: 20px;                       /* 高度 */
+  border-radius: 50%;                 /* 圆形 */
+  border: 2px solid #c9c8c8;          /* 边框 */
+  cursor: pointer;                    /* 手型光标 */
+}
+
+/* 关闭按钮的X形线条 */
+.video-mask .video-content span.video-button::before,
+.video-mask .video-content span.video-button::after {
+  content: "";                        /* 伪元素内容为空 */
+  width: 15px;                        /* 宽度 */
+  height: 2px;                        /* 高度 */
+  position: absolute;                 /* 绝对定位 */
+  left: 50%;                          /* 距左50% */
+  top: 50%;                           /* 距顶50% */
+  background-color: #fff;             /* 白色 */
+}
+
+/* 关闭按钮第一条线(45度角) */
+.video-mask .video-content span.video-button::before {
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+/* 关闭按钮第二条线(-45度角) */
+.video-mask .video-content span.video-button::after {
+  transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+/* end video-recommend */
