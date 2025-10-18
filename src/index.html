@@ -1809,21 +1809,7 @@
         })
     </script>
     <script>
-        const videoList = document.querySelectorAll('.video-list li');
-        const videoMask = document.querySelector('.video-mask');
-        const video = document.querySelector('video');
-        const videoButton = document.querySelector('.video-button');
-        videoList.forEach(item => {
-            item.addEventListener('click', () => {
-                videoMask.style.display = 'block';
-                video.src = item.dataset.videoUrl
-                video.play()
-            })
-        })
-        videoButton.addEventListener('click', () => {
-            videoMask.style.display = 'none';
-            video.pause()
-        })
+        
     </script>
 </body>
 
