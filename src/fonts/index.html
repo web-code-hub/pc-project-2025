@@ -11,94 +11,96 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>pc-project</title>
     <style>
-        .series {
-            padding-bottom:30px;
+        .info {
+            min-height: 500px;
+            background-color: aqua;
         }
 
-        .series .series-content {
-            display: grid;
-            grid-template-rows: 132px 102px 165px;
-            grid-template-columns: 268px 233px 191px 77px 188px;
-            grid-auto-flow: column;
-            grid-template-areas:
-                "a b d d f"
-                "a b e g g"
-                "a c e g g";
+        .info .info-recommend {
+            padding: 26px 0;
         }
 
-        .series .series-content .series-item img {
-            display: block;
-        }
 
-        .series .series-content .series-item:nth-child(1) {
-            grid-area: a;
-        }
-
-        .series .series-content .series-item:nth-child(2) {
-            grid-area: b;
-        }
-
-        .series .series-content .series-item:nth-child(3) {
-            grid-area: c;
-        }
-
-        .series .series-content .series-item:nth-child(4) {
-            grid-area: d;
-        }
-
-        .series .series-content .series-item:nth-child(5) {
-            grid-area: e;
-        }
-
-        .series .series-content .series-item:nth-child(6) {
-            grid-area: g;
-        }
-
-        .series .series-content .series-item:last-child {
-            width: 189px;
-            height: 133px;
-            background-color: #EA9E4D;
-            font-size: 32px;
-            line-height: 133px;
+        .info .info-recommend h2.info-title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #000;
             text-align: center;
-            color: #fff;
-        }
-
-        .series .swiper-series {
-            width: 100%;
-            height: 400px;
-            padding:33px 0 64px;
-            background-color: #E9E9E9;
-        }
-
-        .series .swiper-series .swiper-slide {
-            width: auto;
-        }
-        .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
-            height: 20px;
-            left: 113px;
-            width: calc(100% - 226px);
-            bottom: 23px;
-        }
-        .swiper-scrollbar-drag{
-            height: 14px;
-            top: 3px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            background-color: #fff;
-            box-sizing: border-box;
-            background-clip: content-box;
-            cursor:move;
             position: relative;
         }
-        .swiper-scrollbar-drag::after{
+
+        .info .info-recommend h2.info-title::before {
             content: '';
             position: absolute;
-            left: -5px;
-            right: -5px;  
-            height: 100%;
-            background-color: #fff;
-            border-radius: 10px;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 2px;
+            background-color: #C7000B;
+            transform: translate3d(-50%, 20px, 0);
+        }
+
+        .info .info-content {
+            display: grid;
+            grid-template-rows: repeat(2, 320px);
+            grid-template-columns: 300px 286px 299px 300px;
+            grid-gap: 30px 14px;
+        }
+
+        .info .info-content .info-content-item:nth-child(1) {
+            grid-area: 1/1/2/ span 2;
+        }
+
+        .info .info-content .info-content-item:nth-child(5) {
+            grid-area: 2 / 2 / 3/ span 2;
+        }
+
+        .info .info-content .info-content-item {
+            position: relative;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .info .info-content .info-content-item img {
+            transition: transform .3s;
+        }
+
+        .info .info-content .info-content-item:hover>img {
+            transform: scale(1.3);
+        }
+
+        .info .info-content .info-content-item .product {
+            position: absolute;
+            left: 19px;
+            bottom: 21px;
+            width: 100%;
+            color: #fff;
+            /* background: #C7000B; */
+        }
+
+        .info .info-content .info-content-item .product span {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .info .info-content .info-content-item .product p.title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .info .info-content .info-content-item .product p.more {
+            margin-top: 23px;
+            font-size: 16px;
+        }
+
+        .info .info-content .info-content-item .product p.more span {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            font-weight: bold;
+            color: #c60318;
         }
     </style>
 </head>
@@ -247,7 +249,7 @@
             <!-- banner start -->
             <div class="banner container">
                 <!--swiper start  -->
-                <div class="swiper" id="swiper-banner">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper1.jpg"
                                     alt=""></a></div>
@@ -1423,170 +1425,398 @@
                 </div>
                 <div class="info-content">
                     <div class="info-content-item">
-                        <a href="#">
-                            <img class="img-cover" src="./assets/images/info-1.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a>
+                        <img class="img-cover" src="./assets/images/info-1.png" alt="">
+                        <div class="product">
+                            <span>产品</span>
+                            <p class="title">MINI WATCH GT 3</p>
+                            <span>健康时刻 一表在握</span>
+                            <p class="more">了解更多<span></span></p>
+                        </div>
                     </div>
-                    <div class="info-content-item"><a href="#">
-                            <img class="img-cover" src="./assets/images/info-2.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a></div>
-                    <div class="info-content-item"><a href="#">
-                            <img class="img-cover" src="./assets/images/info-3.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a></div>
-                    <div class="info-content-item"><a href="#">
-                            <img class="img-cover" src="./assets/images/info-4.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a></div>
-                    <div class="info-content-item"><a href="#">
-                            <img class="img-cover" src="./assets/images/info-5.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a></div>
-                    <div class="info-content-item"><a href="#">
-                            <img class="img-cover" src="./assets/images/info-6.png" alt="">
-                            <div class="product">
-                                <span>产品</span>
-                                <p class="title">MINI WATCH GT 3</p>
-                                <span>健康时刻 一表在握</span>
-                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
-                            </div>
-                        </a></div>
+                    <div class="info-content-item">222</div>
+                    <div class="info-content-item">333</div>
+                    <div class="info-content-item">444</div>
+                    <div class="info-content-item">555</div>
+                    <div class="info-content-item">666</div>
                 </div>
             </div>
             <!-- end recomment -->
             <!-- recomment start -->
             <div class="music">
                 <div class="container">
-                    <div class="accordion">
-                        <h2 class="accordion-title">手 风 琴 展 示</h2>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-6.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-5.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-4.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-3.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-2.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./assets/images/accordion-1.png" alt="" width="361px" height="270px">
-                                        <span>开 发 素 材</span>
-                                    </a>
-                                </li>
+                    <div class="music-banner">
+                        <img src="./assets/images/banner.png" alt="">
+                    </div>
+                    <div class="music-recommend">
+                        <h2 class="music-title">歌 单 推 荐</h2>
+                        <div class="recommend-card">
+                            <ul id="J_card">
+                                <li class="active">为你推荐</li>
+                                <li>官方歌单</li>
+                                <li>情歌</li>
+                                <li>网络歌曲</li>
+                                <li>经典KTV</li>
+                                <li>热歌</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="series">
-                        <div class="swiper swiper-series" id="swiper-series">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="series-content">
-                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
-                                                width="268px" height="400px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
-                                                width="233px" height="233px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
-                                                width="233px" height="165px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
-                                                width="268px" height="132px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
-                                                width="191px" height="267px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
-                                                width="266px" height="267px"></div>
-                                        <div class="series-item">萌宠系列</div>
-                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="series-content">
-                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
-                                                width="268px" height="400px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
-                                                width="233px" height="233px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
-                                                width="233px" height="165px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
-                                                width="268px" height="132px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
-                                                width="191px" height="267px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
-                                                width="266px" height="267px"></div>
-                                        <div class="series-item">萌宠系列</div>
-                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="series-content">
-                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
-                                                width="268px" height="400px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
-                                                width="233px" height="233px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
-                                                width="233px" height="165px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
-                                                width="268px" height="132px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
-                                                width="191px" height="267px"></div>
-                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
-                                                width="266px" height="267px"></div>
-                                        <div class="series-item">萌宠系列</div>
-                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
-                                    </div>
-                                </div>
+                        <div class="music-content" id="J_music-content">
+                            <div class="music-content-item active">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- 如果需要滚动条 -->
-                            <div class="swiper-scrollbar"></div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1605,7 +1835,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
     <script>
-        var mySwiper = new Swiper('#swiper-banner', {
+        var mySwiper = new Swiper('.swiper', {
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
             autoplay: {
@@ -1625,20 +1855,10 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        })
-        var mySwiper = new Swiper('#swiper-series', {
-            direction: 'horizontal', // 垂直切换选项
-            slidesPerView: 'auto',
-            mousewheel: true,
-            freeMode: {
-                momentum: false,
-                enabled: true,
-            },
+
             // 如果需要滚动条
             scrollbar: {
                 el: '.swiper-scrollbar',
-                draggable: true,
-                dragSize: 80,
             },
         })
     </script>

@@ -373,7 +373,7 @@
   height: 460px; /* 固定高度 */
   background-color: bisque; /* 背景色 */
   position: relative; /* 相对定位 */
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* Swiper容器 */
@@ -493,7 +493,7 @@
 /* end category */
 /* music-recommend start */
 .music {
-  height: 624px;
+  /* height: 624px; */
   background-color: #f7f7f7;
   margin-top: 26px;
 }
@@ -774,68 +774,69 @@
 /* video-recommend start */
 /* 视频推荐区域整体样式 */
 .video {
-  margin-top: 40px;           /* 距离上方40px */
-  background-color: #f8f8f8;  /* 背景色 */
+  margin-top: 40px; /* 距离上方40px */
+  background-color: #f8f8f8; /* 背景色 */
+  padding-bottom: 40px;
 }
 
 /* 视频推荐标题样式 */
 .video-recommend h2.video-title {
-  text-align: center;         /* 文本居中 */
-  font-size: 28px;            /* 字体大小 */
-  font-weight: bold;          /* 加粗 */
-  color: #000;                /* 黑色字体 */
-  line-height: 28px;          /* 行高 */
-  padding: 27px 0 33px 0;     /* 上左右下内边距 */
+  text-align: center; /* 文本居中 */
+  font-size: 28px; /* 字体大小 */
+  font-weight: bold; /* 加粗 */
+  color: #000; /* 黑色字体 */
+  line-height: 28px; /* 行高 */
+  padding: 27px 0 33px 0; /* 上左右下内边距 */
 }
 
 /* 视频列表容器 */
 .video-recommend .video-list ul {
-  display: flex;              /* 弹性布局 */
-  flex-wrap: wrap;            /* 允许换行 */
+  display: flex; /* 弹性布局 */
+  flex-wrap: wrap; /* 允许换行 */
   justify-content: space-between; /* 两端对齐 */
-  row-gap: 10px;              /* 行间距 */
+  row-gap: 10px; /* 行间距 */
 }
 
 /* 视频列表占位符 */
 .video-recommend .video-list ul span {
-  width: 303px;               /* 宽度 */
+  width: 303px; /* 宽度 */
 }
 
 /* 视频列表项基础样式 */
 .video-recommend .video-list ul li {
-  width: 303px;               /* 宽度 */
-  height: 245px;              /* 高度 */
+  width: 303px; /* 宽度 */
+  height: 245px; /* 高度 */
   transition: box-shadow 0.5s; /* 阴影过渡效果 */
 }
 
 /* 视频列表项悬停效果 */
 .video-recommend .video-list ul li:hover {
-  box-shadow: 2px 1px 10px rgba(0, 0, 0, .3); /* 添加阴影 */
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
 }
 
 /* 视频链接样式 */
 .video-recommend .video-list ul li a {
-  display: block;             /* 块级元素 */
-  width: 100%;                /* 宽度100% */
-  height: 100%;               /* 高度100% */
+  display: block; /* 块级元素 */
+  width: 100%; /* 宽度100% */
+  height: 100%; /* 高度100% */
 }
 
 /* 视频内容区域 */
 .video-recommend .video-list ul li .video-content {
-  position: relative;         /* 相对定位 */
-  height: 190px;              /* 高度 */
-  cursor: pointer;            /* 手型光标 */
+  position: relative; /* 相对定位 */
+  height: 190px; /* 高度 */
+  cursor: pointer; /* 手型光标 */
 }
 
 /* 视频内容遮罩层 */
 .video-recommend .video-list ul li .video-content::before {
-  content: "";                          /* 伪元素内容为空 */
-  position: absolute;                   /* 绝对定位 */
-  inset: 0;                             /* 四边为0 */
-  width: 303px;                         /* 宽度 */
-  height: 190px;                        /* 高度 */
-  background-color: rgba(0, 0, 0, 0);   /* 透明背景 */
-  transition: background-color 0.5s;    /* 背景色过渡 */
+  content: ""; /* 伪元素内容为空 */
+  position: absolute; /* 绝对定位 */
+  inset: 0; /* 四边为0 */
+  width: 303px; /* 宽度 */
+  height: 190px; /* 高度 */
+  background-color: rgba(0, 0, 0, 0); /* 透明背景 */
+  transition: background-color 0.5s; /* 背景色过渡 */
 }
 
 /* 视频内容悬停遮罩效果 */
@@ -845,74 +846,75 @@
 
 /* 视频播放图标 */
 .video-recommend .video-list ul li .video-content .icon {
-  font-size: 30px;            /* 字体大小 */
-  line-height: 1;             /* 行高 */
-  color: #fff;                /* 白色 */
-  position: absolute;         /* 绝对定位 */
-  right: 13px;                /* 距右13px */
-  bottom: 15px;               /* 距底15px */
+  font-size: 30px; /* 字体大小 */
+  line-height: 1; /* 行高 */
+  color: #fff; /* 白色 */
+  position: absolute; /* 绝对定位 */
+  right: 13px; /* 距右13px */
+  bottom: 15px; /* 距底15px */
 }
 
 /* 视频标题段落 */
 .video-recommend .video-list ul li P {
-  height: 55px;               /* 高度 */
-  line-height: 55px;          /* 行高 */
-  text-align: center;         /* 文本居中 */
-  background-color: #fff;     /* 白色背景 */
-  font-size: 16px;            /* 字体大小 */
-  color: #000;                /* 黑色字体 */
+  height: 55px; /* 高度 */
+  line-height: 55px; /* 行高 */
+  text-align: center; /* 文本居中 */
+  background-color: #fff; /* 白色背景 */
+  font-size: 16px; /* 字体大小 */
+  color: #000; /* 黑色字体 */
 }
 
 /* 视频弹窗遮罩层 */
 .video-mask {
-  position: fixed;                    /* 固定定位 */
-  inset: 0;                           /* 四边为0 */
-  width: 100%;                        /* 宽度100% */
-  height: 100%;                       /* 高度100% */
+  position: fixed; /* 固定定位 */
+  inset: 0; /* 四边为0 */
+  width: 100%; /* 宽度100% */
+  height: 100%; /* 高度100% */
   background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-  display: none;                      /* 默认隐藏 */
+  display: none; /* 默认隐藏 */
+  z-index: 1;
 }
 
 /* 视频弹窗内容区域 */
 .video-mask .video-content {
-  position: absolute;                 /* 绝对定位 */
-  left: 50%;                          /* 距左50% */
-  top: 50%;                           /* 距顶50% */
+  position: absolute; /* 绝对定位 */
+  left: 50%; /* 距左50% */
+  top: 50%; /* 距顶50% */
   transform: translate3d(-50%, -50%, 0); /* 居中 */
-  width: 1226px;                      /* 宽度 */
-  /* height: 500px; */                /* 高度(已注释) */
-  background-color: aqua;             /* 背景色(调试用) */
+  width: 1226px; /* 宽度 */
+  /* height: 500px; */ /* 高度(已注释) */
+  background-color: aqua; /* 背景色(调试用) */
 }
 
 /* 视频元素样式 */
 .video-mask .video-content video {
-  width: 1226px;                      /* 宽度 */
-  position: relative;                 /* 相对定位 */
-  display: block;                     /* 块级元素 */
+  width: 1226px; /* 宽度 */
+  position: relative; /* 相对定位 */
+  display: block; /* 块级元素 */
 }
 
 /* 视频关闭按钮 */
 .video-mask .video-content span.video-button {
-  position: absolute;                 /* 绝对定位 */
-  top: -10px;                         /* 距顶-10px */
-  right: -10px;                       /* 距右-10px */
-  width: 20px;                        /* 宽度 */
-  height: 20px;                       /* 高度 */
-  border-radius: 50%;                 /* 圆形 */
-  border: 2px solid #c9c8c8;          /* 边框 */
-  cursor: pointer;                    /* 手型光标 */
+  position: absolute; /* 绝对定位 */
+  top: -10px; /* 距顶-10px */
+  right: -10px; /* 距右-10px */
+  width: 20px; /* 宽度 */
+  height: 20px; /* 高度 */
+  border-radius: 50%; /* 圆形 */
+  border: 2px solid #c9c8c8; /* 边框 */
+  cursor: pointer; /* 手型光标 */
 }
 
 /* 关闭按钮的X形线条 */
 .video-mask .video-content span.video-button::before,
 .video-mask .video-content span.video-button::after {
-  content: "";                        /* 伪元素内容为空 */
-  width: 15px;                        /* 宽度 */
-  height: 2px;                        /* 高度 */
-  position: absolute;                 /* 绝对定位 */
-  left: 50%;                          /* 距左50% */
-  top: 50%;                           /* 距顶50% */
-  background-color: #fff;             /* 白色 */
+  content: ""; /* 伪元素内容为空 */
+  width: 15px; /* 宽度 */
+  height: 2px; /* 高度 */
+  position: absolute; /* 绝对定位 */
+  left: 50%; /* 距左50% */
+  top: 50%; /* 距顶50% */
+  background-color: #fff; /* 白色 */
 }
 
 /* 关闭按钮第一条线(45度角) */
@@ -925,3 +927,190 @@
   transform: translate3d(-50%, -50%, 0) rotate(-45deg);
 }
 /* end video-recommend */
+/* info start */
+/* 信息推荐区域样式 */
+.info .info-recommend {
+  padding: 26px 0; /* 上下内边距26px，左右0 */
+}
+
+/* 信息标题样式 */
+.info .info-recommend h2.info-title {
+  font-size: 34px; /* 字体大小 */
+  font-weight: bold; /* 加粗 */
+  color: #000; /* 黑色字体 */
+  text-align: center; /* 文本居中 */
+  position: relative; /* 相对定位 */
+}
+
+/* 信息标题装饰线（伪元素） */
+.info .info-recommend h2.info-title::before {
+  content: ""; /* 空内容 */
+  position: absolute; /* 绝对定位 */
+  left: 50%; /* 距左50% */
+  top: 50%; /* 距顶50% */
+  width: 30px; /* 宽度 */
+  height: 2px; /* 高度 */
+  background-color: #c7000b; /* 红色背景 */
+  transform: translate3d(-50%, 20px, 0); /* 位置变换 */
+}
+
+/* 信息内容网格布局 */
+.info .info-content {
+  display: grid; /* 网格布局 */
+  grid-template-rows: repeat(2, 320px); /* 2行，每行320px */
+  grid-template-columns: 300px 286px 299px 300px; /* 4列不同宽度 */
+  grid-gap: 30px 14px; /* 网格间距：行30px，列14px */
+}
+
+/* 第一个信息项占据特殊网格区域（第一行，跨两列） */
+.info .info-content .info-content-item:nth-child(1) {
+  grid-area: 1/1/2 / span 2; /* 从第1行第1列开始，到第2行，跨2列 */
+}
+
+/* 第五个信息项占据特殊网格区域（第二行，跨两列） */
+.info .info-content .info-content-item:nth-child(5) {
+  grid-area: 2 / 2 / 3 / span 2; /* 从第2行第2列开始，到第3行，跨2列 */
+}
+
+/* 信息内容项通用样式 */
+.info .info-content .info-content-item {
+  position: relative; /* 相对定位 */
+  /* border: 1px solid #ddd; */ /* 边框（已注释） */
+  cursor: pointer; /* 手型光标 */
+  overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 信息项链接样式 */
+.info .info-content .info-content-item a {
+  display: block; /* 块级元素 */
+}
+
+/* 信息项图片样式 */
+.info .info-content .info-content-item img {
+  display: block; /* 块级元素 */
+  transition: transform 0.3s; /* 变换过渡效果 */
+}
+
+/* 鼠标悬停时图片放大效果 */
+.info .info-content .info-content-item:hover a > img {
+  transform: scale(1.3); /* 放大1.3倍 */
+}
+
+/* 产品信息覆盖层样式 */
+.info .info-content .info-content-item .product {
+  position: absolute; /* 绝对定位 */
+  left: 19px; /* 距左19px */
+  bottom: -30px; /* 距底-30px（初始隐藏） */
+  width: 100%; /* 宽度100% */
+  color: #fff; /* 白色字体 */
+  transition: bottom 0.5s; /* 底部位置过渡效果 */
+}
+
+/* 鼠标悬停时显示产品信息 */
+.info .info-content .info-content-item:hover .product {
+  bottom: 40px; /* 距底40px（显示位置） */
+}
+
+/* 产品信息中的span标签样式 */
+.info .info-content .info-content-item .product span {
+  font-size: 14px; /* 字体大小 */
+  margin-bottom: 12px; /* 底部外边距 */
+}
+
+/* 产品标题样式 */
+.info .info-content .info-content-item .product p.title {
+  font-size: 20px; /* 字体大小 */
+  font-weight: bold; /* 加粗 */
+  margin-bottom: 15px; /* 底部外边距 */
+}
+
+/* 更多信息样式 */
+.info .info-content .info-content-item .product p.more {
+  margin-top: 23px; /* 顶部外边距 */
+  font-size: 16px; /* 字体大小 */
+}
+
+/* 更多信息中的图标样式 */
+.info .info-content .info-content-item .product p.more .iconfont {
+  font-size: 14px; /* 字体大小 */
+  margin-left: 5px; /* 左外边距 */
+  color: #c60318; /* 红色 */
+}
+/* end info */
+/* start accordion  */
+/* 手风琴区域标题样式 */
+.accordion{
+  margin-bottom: 39px;
+}
+.accordion h2.accordion-title {
+  line-height: 44px;      /* 行高 */
+  padding: 51px 0 44px;   /* 上左右下内边距 */
+  text-align: center;     /* 文本居中 */
+}
+
+/* 手风琴内容容器 */
+.accordion .accordion-content ul {
+  display: flex;              /* 弹性布局 */
+  flex-direction: row-reverse; /* 反向排列 */
+}
+
+/* 最后一个列表项（第一个显示项）占据更大空间 */
+.accordion .accordion-content ul li:last-child {
+  flex: 2.1;  /* 弹性占比2.1 */
+}
+
+/* 手风琴列表项通用样式 */
+.accordion .accordion-content ul li {
+  /* border: 1px solid #ddd; */  /* 边框（已注释） */
+  flex: 1;                    /* 弹性占比1 */
+  transition: flex 0.3s;      /* 弹性过渡效果 */
+  overflow: hidden;           /* 溢出隐藏 */
+  position: relative;         /* 相对定位 */
+}
+
+/* 列表项链接样式 */
+.accordion .accordion-content ul li a {
+  display: block;  /* 块级元素 */
+}
+
+/* 列表项文本覆盖层 */
+.accordion .accordion-content ul li a span {
+  position: absolute;                     /* 绝对定位 */
+  left: 0;                               /* 距左0 */
+  bottom: 0;                             /* 距底0 */
+  width: 100%;                           /* 宽度100% */
+  height: 0;                             /* 高度0（初始隐藏） */
+  color: #fff;                         /* 文本颜色 */   
+  line-height: 75px;                     /* 行高 */
+  font-size: 16px;                       /* 字体大小 */
+  font-weight: bold;                     /* 加粗 */
+  text-indent: 1em;                      /* 首行缩进 */
+  transition: height 0.5s;               /* 高度过渡效果 */
+  background-image: linear-gradient(     /* 渐变背景 */
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    transparent 90%
+  );
+}
+
+/* 列表项图片样式 */
+.accordion .accordion-content ul li a img {
+  display: block;  /* 块级元素 */
+}
+
+/* 鼠标悬停时当前项放大 */
+.accordion .accordion-content ul li:hover {
+  flex: 2.1;  /* 弹性占比2.1 */
+}
+
+/* 鼠标悬停时其他项保持原大小 */
+.accordion .accordion-content ul li:hover ~ li {
+  flex: 1;    /* 弹性占比1 */
+}
+
+/* 鼠标悬停时显示文本覆盖层 */
+.accordion .accordion-content ul li:hover a span {
+  height: 75px;     /* 高度75px */
+  padding-top: 5px; /* 顶部内边距 */
+}
+/* end accordion  */
