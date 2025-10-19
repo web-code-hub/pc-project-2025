@@ -1,11 +1,1724 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>pc-project</title>
+    <style>
+        
+    </style>
 </head>
+
 <body>
-    <h1>pc-project</h1>
+    <!-- header start -->
+    <header>
+        <!-- site-tapbar start -->
+        <div class="site-tapbar">
+            <div class="tapbar-flex container">
+                <!-- tapbar-nav start  -->
+                <nav class="tapbar-nav">
+                    <ul>
+                        <li><a href="#">手机商城</a></li>
+                        <li><a href="#">MINI</a></li>
+                        <li><a href="#">IoT</a></li>
+                        <li class="submenu"><a href="#">云服务</a>
+                            <div class="submenu-list">
+                                <ul>
+                                    <li><a href="#">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shoujizhuti-tongxunlu"></use>
+                                            </svg>
+                                            通讯录</a></li>
+                                    <li><a href="#">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shoujizhuti-xiangce"></use>
+                                            </svg>
+                                            短信</a></li>
+                                    <li><a href="#">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shoujizhuti-duanxin"></use>
+                                            </svg>
+                                            云相册</a></li>
+                                    <li><a href="#">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shoujizhuti-xiazai"></use>
+                                            </svg>
+                                            手机云盘</a></li>
+                                    <li><a href="#">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shoujizhuti-bianqian"></use>
+                                            </svg>
+                                            笔记（便签）</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">手机数科</a></li>
+                        <li><a href="#">升品</a></li>
+                        <li><a href="#">智能开发平台</a></li>
+                        <li><a href="#">企业团购</a></li>
+                        <li><a href="#">资质证照</a></li>
+                        <li><a href="#">协议规则</a></li>
+                        <li class="submenu"><a href="#">下载app</a>
+                            <div class="download">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-erweima"></use>
+                                </svg>
+                                <p>手机商城APP</p>
+                            </div>
+                        </li>
+                        <li><a href="#">智能生活</a></li>
+                        <li><a href="#">Melect Nocation</a></li>
+                    </ul>
+                </nav>
+                <!-- end tapbar-nev -->
+                <!-- tapbar-warp start -->
+                <nav class="tapbar-warp">
+                    <div class="tapbar-info">
+                        <ul>
+                            <li><a href="#">登录</a></li>
+                            <li><a href="#">注册</a></li>
+                            <li><a href="#">消息通知</a></li>
+                        </ul>
+                    </div>
+                    <div class="tapbar-car">
+                        <a href="#">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gouwuche"></use>
+                            </svg>
+                            购物车（0）
+                        </a>
+                        <div class="car-menu">购物车中还没有商品，赶紧选购吧！</div>
+                    </div>
+                </nav>
+                <!-- end tapbar-warp -->
+            </div>
+        </div>
+        <!-- end tapbar -->
+        <div class="site-header">
+            <div class="container header-flex">
+                <div class="header-logo">
+                    <h1>编程商城</h1>
+                    <a href="#">
+                        <img src="./assets/images/logo.png" alt="编程商城" width="48px" height="56px"></img>
+                    </a>
+                </div>
+                <div class="header-nav">
+                    <nav>
+                        <div class="nav-menu">
+                            <ul>
+                                <li><a href="#"></a>MIni手机</li>
+                                <li><a href="#"></a>华为手机</li>
+                                <li><a href="#"></a>电视</li>
+                                <li><a href="#"></a>笔记本</li>
+                                <li><a href="#"></a>平板</li>
+                                <li><a href="#"></a>家电</li>
+                                <li><a href="#"></a>路由器</li>
+                                <li><a href="#"></a>服务中心</li>
+                                <li><a href="#"></a>社区</li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header-search">
+                    <form action="#" method="get">
+                        <div>
+                            <input type="text" name="s" class="search-input" id="J_input" placeholder="请输入关键字..." />
+                            <button type="submit" class="search-btn">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-fangdajing"></use>
+                                </svg>
+                            </button>
+                            <div class="keyword-list" id="J_keyword">
+                                <ul>
+                                    <li><a href="#">手机</a></li>
+                                    <li><a href="#">空调</a></li>
+                                    <li><a href="#">风扇</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">笔记本</a></li>
+                                    <li><a href="#">路由器</a></li>
+                                    <li><a href="#">充电宝</a></li>
+                                    <li><a href="#">空气净化器</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- main start -->
+    <main>
+        <section>
+            <!-- banner start -->
+            <div class="banner container">
+                <!--swiper start  -->
+                <div class="swiper" id="swiper-banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper1.jpg"
+                                    alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper2.webp"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper3.webp"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper4.webp"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper5.webp"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="#"><img class="img-cover" src="./assets/images/swiper6.webp"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+                <!-- end swiper -->
+                <!-- category start -->
+                <nav class="category">
+                    <ul>
+                        <li><a href="#">手机</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone2.webp" alt="">
+                                            <span>Xiaomi MIX系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone3.webp" alt="">
+                                            <span>Xiaomi Civi系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone4.webp" alt="">
+                                            <span>REDMI K系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone5.webp" alt="">
+                                            <span>REDMI Turbo系列</span>
+                                        </a></li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/phone6.webp" alt="">
+                                            <span>REDMI Note系列</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone7.webp" alt="">
+                                            <span>REDMI 数字系列</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">电视</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span class="ellipsis-single-line">小米电视SPro MiniLED2026</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>Xiaomi MIX系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>Xiaomi Civi系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>REDMI K系列</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>REDMI Turbo系列</span>
+                                        </a></li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>REDMI Note系列</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/DVD1.webp" alt="">
+                                            <span>REDMI 数字系列</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">笔记本 平板</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">出行 穿戴</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">耳机 音响</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">家电</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">智能 路由器</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">电源 配件</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">健康 儿童</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">生活 箱包</a>
+                            <div class="category-item">
+                                <ul>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span class="ellipsis-single-line">Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <img src="./assets/images/phone.webp" alt="">
+                                            <span>Xiaomi 数字旗舰</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end banner -->
+            <!-- recomment start -->
+            <div class="music">
+                <div class="container">
+                    <div class="music-banner">
+                        <img src="./assets/images/banner.png" alt="">
+                    </div>
+                    <div class="music-recommend">
+                        <h2 class="music-title">歌 单 推 荐</h2>
+                        <div class="recommend-card">
+                            <ul id="J_card">
+                                <li class="active">为你推荐</li>
+                                <li>官方歌单</li>
+                                <li>情歌</li>
+                                <li>网络歌曲</li>
+                                <li>经典KTV</li>
+                                <li>热歌</li>
+                            </ul>
+                        </div>
+                        <div class="music-content" id="J_music-content">
+                            <div class="music-content-item active">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-1.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-2.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">
+                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-3.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-4.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-5.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="music-content-item">
+                                <ul class="music-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-6.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-7.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-8.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-9.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="./assets/images/music-10.png" alt="图片描述" width="224px"
+                                                    height="224px">
+                                                <span class="iconfont icon-play"></span>
+                                            </div>
+                                        </a>
+                                        <p class="music-desc  ellipsis-single-line">拒绝不开心丨rap情歌甜到你发晕</p>
+                                        <p>播放量：1253.9万</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end recomment -->
+        </section>
+        <section>
+            <!-- product start -->
+            <div class="product container">
+                <div class="product-header">
+                    <div class="product-header-left">
+                        <h3>自在游乐 健康成长</h3>
+                        <p>大人过大年，小朋友也有小乐趣。改造房间，给小朋友准备一个“游乐场”，无论是准备带着小朋友回家，还是就地过年，都可以享受 闲适的亲子时光。</p>
+                    </div>
+                    <div class="product-header-more">
+                        <a href="#">更多儿童产品</a>
+                    </div>
+                </div>
+                <div class="product-content">
+
+                    <div class="product-content-item">
+                        <img src="./assets/images/child-1.png" alt="" width="610px" height="715px">
+                        <div class="dot dot1">
+                            <div class="dot-tipc">
+                                <p class="title .ellipsis-single-line">DUNDRA 敦德拉</p>
+                                <p class="desc .ellipsis-mulit-line">带储物空间的活动桌</p>
+                                <p class="price">￥<span>999</span>.00</p>
+                            </div>
+                        </div>
+                        <div class="dot dot2">
+                            <div class="dot-tipc">
+                                <p class="title .ellipsis-single-line">DUNDRA 敦德拉</p>
+                                <p class="desc .ellipsis-mulit-line">带储物空间的活动桌</p>
+                                <p class="price">￥<span>999</span>.00</p>
+                            </div>
+                        </div>
+                        <div class="dot dot3">
+                            <div class="dot-tipc">
+                                <p class="title .ellipsis-single-line">DUNDRA 敦德拉</p>
+                                <p class="desc .ellipsis-mulit-line">带储物空间的活动桌</p>
+                                <p class="price">￥<span>999</span>.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-item">
+                        <img src="./assets/images/child-2.png" alt="" width="295px" height="295px">
+                        <div class="dot dot4">
+                            <div class="dot-tipc">
+                                <p class="title .ellipsis-single-line">DUNDRA 敦德拉</p>
+                                <p class="desc .ellipsis-mulit-line">带储物空间的活动桌</p>
+                                <p class="price">￥<span>999</span>.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content-item">
+                        <img src="./assets/images/child-3.png" alt="" width="295px" height="400px">
+                    </div>
+                    <div class="product-content-item">
+                        <img src="./assets/images/child-4.png" alt="" width="295px" height="400px">
+                    </div>
+                    <div class="product-content-item">
+                        <img src="./assets/images/child-5.png" alt="" width="295px" height="295px">
+                    </div>
+                </div>
+            </div>
+            <!-- end product -->
+            <div class="video">
+                <div class="container">
+                    <div class="video-recommend">
+                        <h2 class="video-title">手机商城 - 精彩视频</h2>
+                        <div class="video-list">
+                            <ul>
+                                <li data-video-url="./assets/video/1.mp4">
+                                    <a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-1.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/2.mp4">
+                                    <a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-2.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/3.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-3.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/4.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-4.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/5.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-5.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/6.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-6.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/7.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-7.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <li data-video-url="./assets/video/8.mp4"><a href="#">
+                                        <div class="video-content">
+                                            <img class="img-cover" src="./assets/images/v-8.png" alt="图片描述"
+                                                width="303px" height="190px">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-play-circle"></use>
+                                            </svg>
+                                        </div>
+                                        <p>巨族 18X</p>
+                                    </a>
+                                </li>
+                                <span></span>
+                                <span></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- recomment start -->
+            <div class="info container">
+                <div class="info-recommend">
+                    <h2 class="info-title">手机商城 - 推荐信息</h2>
+                </div>
+                <div class="info-content">
+                    <div class="info-content-item">
+                        <a href="#">
+                            <img class="img-cover" src="./assets/images/info-1.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="info-content-item"><a href="#">
+                            <img class="img-cover" src="./assets/images/info-2.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a></div>
+                    <div class="info-content-item"><a href="#">
+                            <img class="img-cover" src="./assets/images/info-3.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a></div>
+                    <div class="info-content-item"><a href="#">
+                            <img class="img-cover" src="./assets/images/info-4.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a></div>
+                    <div class="info-content-item"><a href="#">
+                            <img class="img-cover" src="./assets/images/info-5.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a></div>
+                    <div class="info-content-item"><a href="#">
+                            <img class="img-cover" src="./assets/images/info-6.png" alt="">
+                            <div class="product">
+                                <span>产品</span>
+                                <p class="title">MINI WATCH GT 3</p>
+                                <span>健康时刻 一表在握</span>
+                                <p class="more">了解更多<span class="iconfont icon-a-tubiao_jiantou"></span></p>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+            <!-- end recomment -->
+            <!-- recomment start -->
+            <div class="music">
+                <div class="container">
+                    <div class="accordion">
+                        <h2 class="accordion-title">手 风 琴 展 示</h2>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-6.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-5.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-4.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-3.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-2.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./assets/images/accordion-1.png" alt="" width="361px" height="270px">
+                                        <span>开 发 素 材</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series">
+                        <div class="swiper swiper-series" id="swiper-series">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="series-content">
+                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
+                                                width="268px" height="400px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
+                                                width="233px" height="233px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
+                                                width="233px" height="165px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
+                                                width="268px" height="132px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
+                                                width="191px" height="267px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
+                                                width="266px" height="267px"></div>
+                                        <div class="series-item">萌宠系列</div>
+                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="series-content">
+                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
+                                                width="268px" height="400px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
+                                                width="233px" height="233px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
+                                                width="233px" height="165px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
+                                                width="268px" height="132px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
+                                                width="191px" height="267px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
+                                                width="266px" height="267px"></div>
+                                        <div class="series-item">萌宠系列</div>
+                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="series-content">
+                                        <div class="series-item"><img src="./assets/images/series-1.png" alt=""
+                                                width="268px" height="400px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-2.png" alt=""
+                                                width="233px" height="233px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-3.png" alt=""
+                                                width="233px" height="165px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-4.png" alt=""
+                                                width="268px" height="132px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-5.png" alt=""
+                                                width="191px" height="267px"></div>
+                                        <div class="series-item"><img src="./assets/images/series-6.png" alt=""
+                                                width="266px" height="267px"></div>
+                                        <div class="series-item">萌宠系列</div>
+                                        <!-- <div class="series-item"><img src="./assets/images/series-7.png" alt=""></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 如果需要滚动条 -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end recomment -->
+        </section>
+        <div class="video-mask">
+            <div class="video-content">
+                <video src="./assets/video/1.mp4" controls></video>
+                <span class="video-button"></span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-service ">
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-editor2"></use>
+                                </svg>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-tian"></use>
+                                </svg>
+                                7天无理由退货
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-tian1"></use>
+                                </svg>
+                                15天免费换货
+                            </a>
+                        </li>
+                        <li class="service-item">
+
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-gift"></use>
+                                </svg>
+                                满69元包邮
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-weizhi"></use>
+                                </svg>
+                                1100余家售后网点
+                            </a>
+                        </li>
+                    </ul>
+                    <service-body></service-body>
+                </div>
+                <div class="footer-info">
+                    <div class="info-menu">
+                        <dl>
+                            <dt>选购指南</dt>
+                            <dd><a href="#">手机</a></dd>
+                            <dd><a href="#">电视</a></dd>
+                            <dd><a href="#">笔记本</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">服务中心</a></dt>
+                            <dd><a href="#">申请售后</a></dd>
+                            <dd><a href="#">售后政策</a></dd>
+                            <dd><a href="#">维修服务价格</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">线下门店</a></dt>
+                            <dd><a href="#">Mini之家</a></dd>
+                            <dd><a href="#">服务网点</a></dd>
+                            <dd><a href="#">授权体验店/专区</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">关于迷你</a></dt>
+                            <dd><a href="#">了解mini</a></dd>
+                            <dd><a href="#">加入mini</a></dd>
+                            <dd><a href="#">投资者关系</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">关注我们</a></dt>
+                            <dd><a href="#">新浪微博</a></dd>
+                            <dd><a href="#">官方微信</a></dd>
+                            <dd><a href="#">联系我们</a></dd>
+                        </dl>
+                    </div>
+                    <div class="info-tel">
+                        <p class="tel">400-123-4567</p>
+                        <p class="time"><span>8:00-18:00</span>（仅收市话费）</p>
+                        <p class="kf"><a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-duanxin"></use>
+                                </svg>
+                                人工客服
+                            </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">ICODINGEDU | Copyright © 2019-present Arry | 陕 ICP 备 2022004903 号-1</div>
+        </div>
+    </footer>
+    <div class="chat">
+        <ul class="chat-list">
+            <li>
+                <a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                    前端直播课
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加微信，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                    QQ群
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加QQ群，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-kefu"></use>
+                    </svg>
+                    在线客服
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加微信，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-xiangyingshi"></use>
+                    </svg>
+                    响应式网站
+                </a>
+            </li>
+        </ul>
+        <div class="back-top" id="J_back_top">
+            <div class="back-item">
+                <svg class="icon" aria-atomic="true">
+                    <use xlink:href="#icon-fanhuidingbu"></use>
+                </svg>
+                <p>返回顶部</p>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <script src="./fonts/iconfont.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        var mySwiper = new Swiper('#swiper-banner', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay: {
+                delay: 1000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+            },
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+        var mySwiper = new Swiper('#swiper-series', {
+            direction: 'horizontal', // 垂直切换选项
+            slidesPerView: 'auto',
+            mousewheel: true,
+            freeMode: {
+                momentum: false,
+                enabled: true,
+            },
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+                dragSize: 80,
+            },
+        })
+    </script>
+    <script>
+        
+    </script>
 </body>
+
 </html>
