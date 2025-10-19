@@ -51,6 +51,25 @@ function videoPlay() {
         video.pause()
     })
 }
+function backTop() {
+    const backBtn = document.getElementById('J_back_top');
+    document.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+            backBtn.style.display = 'block';
+        } else {
+            backBtn.style.display = 'none';
+        }
+    });
+    backBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 searchInput()
 cardItemActive()
 videoPlay()
+backTop()

@@ -11,94 +11,248 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>pc-project</title>
     <style>
-        .series {
-            padding-bottom:30px;
+        .footer {
+            margin-top: calc(65px - 28px);
+            line-height: 1;
         }
 
-        .series .series-content {
-            display: grid;
-            grid-template-rows: 132px 102px 165px;
-            grid-template-columns: 268px 233px 191px 77px 188px;
-            grid-auto-flow: column;
-            grid-template-areas:
-                "a b d d f"
-                "a b e g g"
-                "a c e g g";
+        .footer-service {
+            height: calc(24px + 28px *2);
+            /* background-color: aquamarine; */
         }
 
-        .series .series-content .series-item img {
+        .footer-service .service-list {
+            display: flex;
+            column-gap: 1px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .footer-service .service-list .service-item {
+            position: relative;
+        }
+
+        .footer-service .service-list .service-item::before {
+            position: absolute;
+            top: 50%;
+            right: -1px;
+            transform: translateY(-50%);
+            content: '';
+            width: 1px;
+            height: 27px;
+            background-color: #e0e0e0;
+        }
+
+        .footer-service .service-list .service-item:last-child:before {
+            width: 0;
+        }
+
+        .footer-service .service-list .service-item a {
+            display: flex;
+            width: 242px;
+            height: calc(28px * 2 + 24px);
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            line-height: 27px;
+            font-size: 16px;
+            color: #616161;
+        }
+
+        .footer-service .service-list .service-item:hover a {
+            color: #ffa600
+        }
+
+        .footer-service .service-list .service-item .icon {
+            font-size: 24px;
+            margin-right: 7px;
+            text-align: center;
+        }
+
+        .footer .footer-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .footer .footer-info .info-menu {
+            flex: 1;
+            padding: 0 15px 46px 160px;
+            display: flex;
+        }
+
+        .footer .footer-info .info-menu dl {
+            flex: 1;
+            line-height: 1;
+        }
+
+        .footer .footer-info .info-menu dl dt {
+            margin-bottom: 31px;
+            color: #424242
+        }
+
+        .footer .footer-info .info-menu dl dd {
+            color: #757575;
+            font-size: 12px;
+            padding-bottom: 15px;
+        }
+
+        .footer .footer-info .info-menu dl dd:hover a {
+            color: #ff6700;
+            cursor: pointer;
+        }
+
+        .footer .footer-info .info-tel {
+            position: relative;
+            width: calc((1226px - 4px) / 5);
+            /* background-color: aqua; */
+            font-family: ArialMT;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .footer-info .info-tel::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 80px;
+            background-color: #e0e0e0;
+
+        }
+
+        .footer .footer-info .info-tel .tel {
+            font-size: 22px;
+            color: #ff6700;
+            margin-bottom: 11px;
+        }
+
+        .footer .footer-info .info-tel p.time {
+            font-size: 12px;
+            text-align: left;
+            margin-bottom: 9px;
+            color: #616161;
+        }
+
+        .footer .footer-info .info-tel p.time span {
+            color: #ff6700;
+        }
+
+        .footer .footer-info .info-tel p.kf {
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ff6700;
+            text-align: center;
+        }
+
+        .footer .footer-info .info-tel p.kf a {
+            color: #ff6700;
+            font-size: 12px;
+        }
+
+        .footer .footer-info .info-tel p.kf a .icon {
+            font-size: 11px;
+            margin-top: 0;
+        }
+
+        .footer .copyright {
+            font-family: MicrosoftYaHei;
+            text-align: center;
+            font-size: 16px;
+            color: #424242;
+            margin-bottom: 57px;
+            line-height: calc(46px + 16px);
+        }
+
+        .chat {
+            position: fixed;
+            top: 317px;
+            right: 0;
+            width: 85px;
+            /* min-height: 300px ; */
+            line-height: 1;
+            z-index: 1;
+        }
+
+        .chat .chat-list {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .chat .chat-list li {
+            width: 87px;
+            height: 87px;
+            text-align: center;
+            border: 1px solid #f5f5f5;
+            background-color: #fff;
+            position: relative;
+            margin-bottom: 1px;
+        }
+
+        .chat .chat-list li .children {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: 88px;
+            top: 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+            display: none;
+            transition: display 3s ease-in-out;
+            background-color: #fff;
+        }
+
+        .chat .chat-list li .children .children-item {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat .chat-list li a {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            color: #484848;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .chat .chat-list li:hover a {
+            color: #ff6700;
+        }
+
+        .chat .chat-list li:hover .children {
             display: block;
         }
 
-        .series .series-content .series-item:nth-child(1) {
-            grid-area: a;
+        .chat .chat-list li a .icon {
+            margin: 13px 0 16px;
+            font-size: 23px;
         }
 
-        .series .series-content .series-item:nth-child(2) {
-            grid-area: b;
+        .chat .back-top {
+            width: 85px;
+            height: 85px;
+            background-color: #f7f7f7;
+            display: none;
         }
-
-        .series .series-content .series-item:nth-child(3) {
-            grid-area: c;
+        .chat .back-top:hover{
+            color: #ff6700;
+            cursor: pointer;
         }
-
-        .series .series-content .series-item:nth-child(4) {
-            grid-area: d;
+        .chat .back-top .back-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
-        .series .series-content .series-item:nth-child(5) {
-            grid-area: e;
-        }
-
-        .series .series-content .series-item:nth-child(6) {
-            grid-area: g;
-        }
-
-        .series .series-content .series-item:last-child {
-            width: 189px;
-            height: 133px;
-            background-color: #EA9E4D;
-            font-size: 32px;
-            line-height: 133px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .series .swiper-series {
-            width: 100%;
-            height: 400px;
-            padding:33px 0 64px;
-            background-color: #E9E9E9;
-        }
-
-        .series .swiper-series .swiper-slide {
-            width: auto;
-        }
-        .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
-            height: 20px;
-            left: 113px;
-            width: calc(100% - 226px);
-            bottom: 23px;
-        }
-        .swiper-scrollbar-drag{
-            height: 14px;
-            top: 3px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            background-color: #fff;
-            box-sizing: border-box;
-            background-clip: content-box;
-            cursor:move;
-            position: relative;
-        }
-        .swiper-scrollbar-drag::after{
-            content: '';
-            position: absolute;
-            left: -5px;
-            right: -5px;  
-            height: 100%;
-            background-color: #fff;
-            border-radius: 10px;
+        .chat .back-top .icon {
+            font-size: 24px;
+            margin: 13px 0 16px;
         }
     </style>
 </head>
@@ -910,7 +1064,7 @@
                                             </div>
                                         </a>
                                         <p class="music-desc  ellipsis-single-line">
-                                            拒绝不开心丨rap情歌甜到你发晕zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                                            拒绝不开心丨rap情歌甜到你发晕</p>
                                         <p>播放量：1253.9万</p>
                                     </li>
                                     <li>
@@ -1600,6 +1754,168 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-service ">
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-editor2"></use>
+                                </svg>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-tian"></use>
+                                </svg>
+                                7天无理由退货
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-tian1"></use>
+                                </svg>
+                                15天免费换货
+                            </a>
+                        </li>
+                        <li class="service-item">
+
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-gift"></use>
+                                </svg>
+                                满69元包邮
+                            </a>
+                        </li>
+                        <li class="service-item">
+                            <a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-weizhi"></use>
+                                </svg>
+                                1100余家售后网点
+                            </a>
+                        </li>
+                    </ul>
+                    <service-body></service-body>
+                </div>
+                <div class="footer-info">
+                    <div class="info-menu">
+                        <dl>
+                            <dt>选购指南</dt>
+                            <dd><a href="#">手机</a></dd>
+                            <dd><a href="#">电视</a></dd>
+                            <dd><a href="#">笔记本</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">服务中心</a></dt>
+                            <dd><a href="#">申请售后</a></dd>
+                            <dd><a href="#">售后政策</a></dd>
+                            <dd><a href="#">维修服务价格</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">线下门店</a></dt>
+                            <dd><a href="#">Mini之家</a></dd>
+                            <dd><a href="#">服务网点</a></dd>
+                            <dd><a href="#">授权体验店/专区</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">关于迷你</a></dt>
+                            <dd><a href="#">了解mini</a></dd>
+                            <dd><a href="#">加入mini</a></dd>
+                            <dd><a href="#">投资者关系</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#">关注我们</a></dt>
+                            <dd><a href="#">新浪微博</a></dd>
+                            <dd><a href="#">官方微信</a></dd>
+                            <dd><a href="#">联系我们</a></dd>
+                        </dl>
+                    </div>
+                    <div class="info-tel">
+                        <p class="tel">400-123-4567</p>
+                        <p class="time"><span>8:00-18:00</span>（仅收市话费）</p>
+                        <p class="kf"><a href="#">
+                                <svg class="icon" aria-atomic="true">
+                                    <use xlink:href="#icon-duanxin"></use>
+                                </svg>
+                                人工客服
+                            </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">ICODINGEDU | Copyright © 2019-present Arry | 陕 ICP 备 2022004903 号-1</div>
+        </div>
+    </footer>
+    <div class="chat">
+        <ul class="chat-list">
+            <li>
+                <a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                    前端直播课
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加微信，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                    QQ群
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加QQ群，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-kefu"></use>
+                    </svg>
+                    在线客服
+                </a>
+                <div class="children">
+                    <div class="children-item">
+                        <p class="title">0基础web前端课</p>
+                        <p class="erweima"><img src="./assets/images/erweima.jpg" alt="" width="120px" height="120px">
+                        </p>
+                        <p class="desc">加微信，免费学</p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">
+                    <svg class="icon" aria-atomic="true">
+                        <use xlink:href="#icon-xiangyingshi"></use>
+                    </svg>
+                    响应式网站
+                </a>
+            </li>
+        </ul>
+        <div class="back-top" id="J_back_top">
+            <div class="back-item">
+                <svg class="icon" aria-atomic="true">
+                    <use xlink:href="#icon-fanhuidingbu"></use>
+                </svg>
+                <p>返回顶部</p>
+            </div>
+        </div>
+    </div>
     <!-- end header -->
     <script src="./fonts/iconfont.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
@@ -1643,7 +1959,7 @@
         })
     </script>
     <script>
-
+        
     </script>
 </body>
 

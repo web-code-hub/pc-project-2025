@@ -1039,55 +1039,55 @@
 /* end info */
 /* start accordion  */
 /* 手风琴区域标题样式 */
-.accordion{
+.accordion {
   margin-bottom: 39px;
 }
 .accordion h2.accordion-title {
-  line-height: 44px;      /* 行高 */
-  padding: 51px 0 44px;   /* 上左右下内边距 */
-  text-align: center;     /* 文本居中 */
+  line-height: 44px; /* 行高 */
+  padding: 51px 0 44px; /* 上左右下内边距 */
+  text-align: center; /* 文本居中 */
 }
 
 /* 手风琴内容容器 */
 .accordion .accordion-content ul {
-  display: flex;              /* 弹性布局 */
+  display: flex; /* 弹性布局 */
   flex-direction: row-reverse; /* 反向排列 */
 }
 
 /* 最后一个列表项（第一个显示项）占据更大空间 */
 .accordion .accordion-content ul li:last-child {
-  flex: 2.1;  /* 弹性占比2.1 */
+  flex: 2.1; /* 弹性占比2.1 */
 }
 
 /* 手风琴列表项通用样式 */
 .accordion .accordion-content ul li {
-  /* border: 1px solid #ddd; */  /* 边框（已注释） */
-  flex: 1;                    /* 弹性占比1 */
-  transition: flex 0.3s;      /* 弹性过渡效果 */
-  overflow: hidden;           /* 溢出隐藏 */
-  position: relative;         /* 相对定位 */
+  /* border: 1px solid #ddd; */ /* 边框（已注释） */
+  flex: 1; /* 弹性占比1 */
+  transition: flex 0.3s; /* 弹性过渡效果 */
+  overflow: hidden; /* 溢出隐藏 */
+  position: relative; /* 相对定位 */
 }
 
 /* 列表项链接样式 */
 .accordion .accordion-content ul li a {
-  display: block;  /* 块级元素 */
+  display: block; /* 块级元素 */
 }
 
 /* 列表项文本覆盖层 */
 .accordion .accordion-content ul li a span {
-  position: absolute;                     /* 绝对定位 */
-  left: 0;                               /* 距左0 */
-  bottom: 0;                             /* 距底0 */
-  width: 100%;                           /* 宽度100% */
-  height: 0;                             /* 高度0（初始隐藏） */
-  color: #fff;                         /* 文本颜色 */   
-  line-height: 75px;                     /* 行高 */
-  font-size: 16px;                       /* 字体大小 */
-  font-weight: bold;                     /* 加粗 */
-  text-indent: 1em;                      /* 首行缩进 */
-  transition: height 0.5s;               /* 高度过渡效果 */
-  background-image: linear-gradient(     /* 渐变背景 */
-    to bottom,
+  position: absolute; /* 绝对定位 */
+  left: 0; /* 距左0 */
+  bottom: 0; /* 距底0 */
+  width: 100%; /* 宽度100% */
+  height: 0; /* 高度0（初始隐藏） */
+  color: #fff; /* 文本颜色 */
+  line-height: 75px; /* 行高 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold; /* 加粗 */
+  text-indent: 1em; /* 首行缩进 */
+  transition: height 0.5s; /* 高度过渡效果 */
+  background-image: linear-gradient(
+    /* 渐变背景 */ to bottom,
     rgba(0, 0, 0, 0.2),
     transparent 90%
   );
@@ -1095,22 +1095,130 @@
 
 /* 列表项图片样式 */
 .accordion .accordion-content ul li a img {
-  display: block;  /* 块级元素 */
+  display: block; /* 块级元素 */
 }
 
 /* 鼠标悬停时当前项放大 */
 .accordion .accordion-content ul li:hover {
-  flex: 2.1;  /* 弹性占比2.1 */
+  flex: 2.1; /* 弹性占比2.1 */
 }
 
 /* 鼠标悬停时其他项保持原大小 */
 .accordion .accordion-content ul li:hover ~ li {
-  flex: 1;    /* 弹性占比1 */
+  flex: 1; /* 弹性占比1 */
 }
 
 /* 鼠标悬停时显示文本覆盖层 */
 .accordion .accordion-content ul li:hover a span {
-  height: 75px;     /* 高度75px */
+  height: 75px; /* 高度75px */
   padding-top: 5px; /* 顶部内边距 */
 }
 /* end accordion  */
+/* series start */
+/* 系列展示区域 */
+.series {
+  padding-bottom: 30px; /* 底部内边距 */
+}
+
+/* 系列内容网格布局 */
+.series .series-content {
+  display: grid; /* 使用网格布局 */
+  /* 定义三行的高度 */
+  grid-template-rows: 132px 102px 165px;
+  /* 定义五列的宽度 */
+  grid-template-columns: 268px 233px 191px 77px 188px;
+  grid-auto-flow: column; /* 网格项目按列填充 */
+  /* 定义网格区域布局 */
+  grid-template-areas:
+    "a b d d f"
+    "a b e g g"
+    "a c e g g";
+}
+
+/* 系列项图片样式 */
+.series .series-content .series-item img {
+  display: block; /* 图片以块级元素显示 */
+}
+
+/* 为每个系列项分配指定的网格区域 */
+.series .series-content .series-item:nth-child(1) {
+  grid-area: a; /* 第一项占据区域a */
+}
+
+.series .series-content .series-item:nth-child(2) {
+  grid-area: b; /* 第二项占据区域b */
+}
+
+.series .series-content .series-item:nth-child(3) {
+  grid-area: c; /* 第三项占据区域c */
+}
+
+.series .series-content .series-item:nth-child(4) {
+  grid-area: d; /* 第四项占据区域d */
+}
+
+.series .series-content .series-item:nth-child(5) {
+  grid-area: e; /* 第五项占据区域e */
+}
+
+.series .series-content .series-item:nth-child(6) {
+  grid-area: g; /* 第六项占据区域g */
+}
+
+/* 最后一个系列项的特殊样式 */
+.series .series-content .series-item:last-child {
+  width: 189px; /* 宽度 */
+  height: 133px; /* 高度 */
+  background-color: #ea9e4d; /* 背景色 */
+  font-size: 32px; /* 字体大小 */
+  line-height: 133px; /* 行高与高度相同实现垂直居中 */
+  text-align: center; /* 文本水平居中 */
+  color: #fff; /* 白色文字 */
+}
+
+/* Swiper系列容器样式 */
+.series .swiper-series {
+  width: 100%; /* 宽度100% */
+  height: 400px; /* 固定高度 */
+  padding: 33px 0 64px; /* 上下内边距 */
+  background-color: #e9e9e9; /* 背景色 */
+}
+
+/* Swiper滑块样式 */
+.series .swiper-series .swiper-slide {
+  width: auto; /* 宽度自适应内容 */
+}
+
+/* Swiper水平滚动条样式 */
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  height: 20px; /* 滚动条高度 */
+  left: 113px; /* 距离左侧位置 */
+  width: calc(100% - 226px); /* 宽度计算 */
+  bottom: 23px; /* 距离底部位置 */
+}
+
+/* 滚动条拖拽部分样式 */
+.swiper-scrollbar-drag {
+  height: 14px; /* 高度 */
+  top: 3px; /* 距离顶部位置 */
+  border-left: 10px solid transparent; /* 左透明边框 */
+  border-right: 10px solid transparent; /* 右透明边框 */
+  background-color: #fff; /* 背景色 */
+  box-sizing: border-box; /* 盒模型 */
+  background-clip: content-box; /* 背景裁剪 */
+  cursor: move; /* 移动光标 */
+  position: relative; /* 相对定位 */
+}
+
+/* 滚动条拖拽部分的伪元素样式 */
+.swiper-scrollbar-drag::after {
+  content: ""; /* 空内容 */
+  position: absolute; /* 绝对定位 */
+  left: -5px; /* 距离左侧位置 */
+  right: -5px; /* 距离右侧位置 */
+  height: 100%; /* 高度100% */
+  background-color: #fff; /* 背景色 */
+  border-radius: 10px; /* 圆角 */
+}
+/* end series */
