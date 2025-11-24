@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>pc-project</title>
-    <style>
-        
-    </style>
 </head>
 
 <body>
@@ -157,7 +154,7 @@
     <main>
         <section>
             <!-- banner start -->
-            <div class="banner container">
+            <div class="banner container staircase-content">
                 <!--swiper start  -->
                 <div class="swiper" id="swiper-banner">
                     <div class="swiper-wrapper">
@@ -787,7 +784,7 @@
                     <div class="music-banner">
                         <img src="./assets/images/banner.png" alt="">
                     </div>
-                    <div class="music-recommend">
+                    <div class="music-recommend staircase-content">
                         <h2 class="music-title">歌 单 推 荐</h2>
                         <div class="recommend-card">
                             <ul id="J_card">
@@ -1165,7 +1162,7 @@
         </section>
         <section>
             <!-- product start -->
-            <div class="product container">
+            <div class="product container staircase-content">
                 <div class="product-header">
                     <div class="product-header-left">
                         <h3>自在游乐 健康成长</h3>
@@ -1225,7 +1222,7 @@
             <!-- end product -->
             <div class="video">
                 <div class="container">
-                    <div class="video-recommend">
+                    <div class="video-recommend staircase-content">
                         <h2 class="video-title">手机商城 - 精彩视频</h2>
                         <div class="video-list">
                             <ul>
@@ -1329,7 +1326,7 @@
         </section>
         <section>
             <!-- recomment start -->
-            <div class="info container">
+            <div class="info container staircase-content">
                 <div class="info-recommend">
                     <h2 class="info-title">手机商城 - 推荐信息</h2>
                 </div>
@@ -1396,7 +1393,7 @@
             <!-- recomment start -->
             <div class="music">
                 <div class="container">
-                    <div class="accordion">
+                    <div class="accordion staircase-content">
                         <h2 class="accordion-title">手 风 琴 展 示</h2>
                         <div class="accordion-content">
                             <ul>
@@ -1439,7 +1436,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="series">
+                    <div class="series staircase-content">
                         <div class="swiper swiper-series" id="swiper-series">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -1511,6 +1508,17 @@
                 <span class="video-button"></span>
             </div>
         </div>
+        <nav class="staircase">
+            <ul>
+                <li class="selected">轮播图</li>
+                <li>歌单推荐</li>
+                <li>家具推荐</li>
+                <li>精彩视频</li>
+                <li>推荐信息</li>
+                <li>手风琴</li>
+                <li>拖拽画廊</li>
+            </ul>
+        </nav>
     </main>
     <footer>
         <div class="footer">
@@ -1717,7 +1725,63 @@
         })
     </script>
     <script>
-        
+        const $ = function (selector) {
+            return document.querySelectorAll(selector)
+        }
+        const dom = {
+            list: $('.staircase ul li'),
+            contentList: $('.staircase-content'),
+            staircase: document.querySelector('.staircase'),
+        }
+        let currentIndex = 0
+        const scrollTops = []
+        for (let i = 0; i < dom.contentList.length; i++) {
+            scrollTops.push(dom.contentList[i].offsetTop)
+        }
+        scrollTops.push(Infinity)
+        console.log(scrollTops);
+
+
+        for (let i = 0; i < dom.list.length; i++) {
+            dom.list[i].addEventListener('click', function () {
+                dom.list[currentIndex].classList.remove('selected')
+                dom.list[i].classList.add('selected')
+                currentIndex = i
+                window.scrollTo({
+                    left: 0,
+                    top: scrollTops[i],
+                    behavior: 'smooth'
+                })
+            })
+        }
+        document.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY
+            for (let i = 0; i < scrollTops.length; i++) {
+                let k = i - 1 < 0 ? 0 : i - 1
+                if (scrollTops[i] > scrollTop + 50) {
+                    dom.list[currentIndex].classList.remove('selected')
+                    dom.list[k].classList.add('selected')
+                    currentIndex = k
+                    return;
+                }
+            }
+        })
+        document.addEventListener('scroll', function () {
+            hideStaircase()
+        })
+        window.addEventListener('resize', function () {
+            hideStaircase()
+        })
+        function hideStaircase() {
+            const scrollTop = window.scrollY
+            console.log(scrollTop);
+
+            if (scrollTop > 100 && window.innerWidth > 1400) {
+                dom.staircase.style.display = 'block'
+            } else {
+                dom.staircase.style.display = 'none'
+            }
+        }
     </script>
 </body>
 

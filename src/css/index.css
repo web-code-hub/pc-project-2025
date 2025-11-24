@@ -1223,248 +1223,318 @@
 }
 /* end series */
 /* footer start */
+/* 页脚区域 */
 .footer {
-  margin-top: calc(65px - 28px);
-  line-height: 1;
+  margin-top: calc(65px - 28px); /* 顶部外边距计算 */
+  line-height: 1; /* 行高设置为1 */
 }
 
+/* 页脚服务区域 */
 .footer-service {
-  height: calc(24px + 28px * 2);
-  /* background-color: aquamarine; */
+  height: calc(24px + 28px * 2); /* 高度计算 */
+  /* background-color: aquamarine; */ /* 调试用背景色 */
 }
 
+/* 服务列表 */
 .footer-service .service-list {
-  display: flex;
-  column-gap: 1px;
-  border-bottom: 1px solid #e0e0e0;
+  display: flex; /* 弹性布局 */
+  column-gap: 1px; /* 列间距1px */
+  border-bottom: 1px solid #e0e0e0; /* 底部边框 */
 }
 
+/* 服务项 */
 .footer-service .service-list .service-item {
-  position: relative;
+  position: relative; /* 相对定位 */
 }
 
+/* 服务项分隔线 */
 .footer-service .service-list .service-item::before {
-  position: absolute;
-  top: 50%;
-  right: -1px;
-  transform: translateY(-50%);
-  content: "";
-  width: 1px;
-  height: 27px;
-  background-color: #e0e0e0;
+  position: absolute; /* 绝对定位 */
+  top: 50%; /* 距顶部50% */
+  right: -1px; /* 距右侧-1px */
+  transform: translateY(-50%); /* 垂直居中 */
+  content: ""; /* 伪元素内容为空 */
+  width: 1px; /* 宽度1px */
+  height: 27px; /* 高度27px */
+  background-color: #e0e0e0; /* 背景色 */
 }
 
+/* 最后一个服务项隐藏分隔线 */
 .footer-service .service-list .service-item:last-child:before {
-  width: 0;
+  width: 0; /* 宽度为0 */
 }
 
+/* 服务项链接 */
 .footer-service .service-list .service-item a {
-  display: flex;
-  width: 242px;
-  height: calc(28px * 2 + 24px);
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  line-height: 27px;
-  font-size: 16px;
-  color: #616161;
+  display: flex; /* 弹性布局 */
+  width: 242px; /* 宽度 */
+  height: calc(28px * 2 + 24px); /* 高度计算 */
+  flex: 1; /* 弹性占比 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  line-height: 27px; /* 行高 */
+  font-size: 16px; /* 字体大小 */
+  color: #616161; /* 字体颜色 */
 }
 
+/* 服务项链接悬停效果 */
 .footer-service .service-list .service-item:hover a {
-  color: #ffa600;
+  color: #ffa600; /* 悬停时颜色 */
 }
 
+/* 服务项图标 */
 .footer-service .service-list .service-item .icon {
-  font-size: 24px;
-  margin-right: 7px;
-  text-align: center;
+  font-size: 24px; /* 字体大小 */
+  margin-right: 7px; /* 右外边距 */
+  text-align: center; /* 文本居中 */
 }
 
+/* 页脚信息区域 */
 .footer .footer-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 两端对齐 */
+  margin-top: 40px; /* 顶部外边距 */
 }
 
+/* 信息菜单 */
 .footer .footer-info .info-menu {
-  flex: 1;
-  padding: 0 15px 46px 160px;
-  display: flex;
+  flex: 1; /* 弹性占比 */
+  padding: 0 15px 46px 160px; /* 内边距 */
+  display: flex; /* 弹性布局 */
 }
 
+/* 菜单列表 */
 .footer .footer-info .info-menu dl {
-  flex: 1;
-  line-height: 1;
+  flex: 1; /* 弹性占比 */
+  line-height: 1; /* 行高 */
 }
 
+/* 菜单标题 */
 .footer .footer-info .info-menu dl dt {
-  margin-bottom: 31px;
-  color: #424242;
+  margin-bottom: 31px; /* 底部外边距 */
+  color: #424242; /* 字体颜色 */
 }
 
+/* 菜单项 */
 .footer .footer-info .info-menu dl dd {
-  color: #757575;
-  font-size: 12px;
-  padding-bottom: 15px;
+  color: #757575; /* 字体颜色 */
+  font-size: 12px; /* 字体大小 */
+  padding-bottom: 15px; /* 底部内边距 */
 }
 
+/* 菜单项悬停效果 */
 .footer .footer-info .info-menu dl dd:hover a {
-  color: #ff6700;
-  cursor: pointer;
+  color: #ff6700; /* 悬停时颜色 */
+  cursor: pointer; /* 鼠标手型 */
 }
 
+/* 电话信息区域 */
 .footer .footer-info .info-tel {
-  position: relative;
-  width: calc((1226px - 4px) / 5);
-  /* background-color: aqua; */
-  font-family: ArialMT;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative; /* 相对定位 */
+  width: calc((1226px - 4px) / 5); /* 宽度计算 */
+  /* background-color: aqua; */ /* 调试用背景色 */
+  font-family: ArialMT; /* 字体族 */
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
 }
 
+/* 电话信息分隔线 */
 .footer .footer-info .info-tel::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 1px;
-  height: 80px;
-  background-color: #e0e0e0;
+  content: ""; /* 伪元素内容为空 */
+  position: absolute; /* 绝对定位 */
+  left: 0; /* 距左侧0 */
+  width: 1px; /* 宽度1px */
+  height: 80px; /* 高度80px */
+  background-color: #e0e0e0; /* 背景色 */
 }
 
+/* 电话号码 */
 .footer .footer-info .info-tel .tel {
-  font-size: 22px;
-  color: #ff6700;
-  margin-bottom: 11px;
+  font-size: 22px; /* 字体大小 */
+  color: #ff6700; /* 字体颜色 */
+  margin-bottom: 11px; /* 底部外边距 */
 }
 
+/* 服务时间 */
 .footer .footer-info .info-tel p.time {
-  font-size: 12px;
-  text-align: left;
-  margin-bottom: 9px;
-  color: #616161;
+  font-size: 12px; /* 字体大小 */
+  text-align: left; /* 文本左对齐 */
+  margin-bottom: 9px; /* 底部外边距 */
+  color: #616161; /* 字体颜色 */
 }
 
+/* 服务时间高亮 */
 .footer .footer-info .info-tel p.time span {
-  color: #ff6700;
+  color: #ff6700; /* 字体颜色 */
 }
 
+/* 客服按钮 */
 .footer .footer-info .info-tel p.kf {
-  width: 120px;
-  height: 30px;
-  line-height: 30px;
-  border: 1px solid #ff6700;
-  text-align: center;
+  width: 120px; /* 宽度 */
+  height: 30px; /* 高度 */
+  line-height: 30px; /* 行高 */
+  border: 1px solid #ff6700; /* 边框 */
+  text-align: center; /* 文本居中 */
 }
 
+/* 客服按钮链接 */
 .footer .footer-info .info-tel p.kf a {
-  color: #ff6700;
-  font-size: 12px;
+  color: #ff6700; /* 字体颜色 */
+  font-size: 12px; /* 字体大小 */
 }
 
+/* 客服按钮图标 */
 .footer .footer-info .info-tel p.kf a .icon {
-  font-size: 11px;
-  margin-top: 0;
+  font-size: 11px; /* 字体大小 */
+  margin-top: 0; /* 顶部外边距 */
 }
 
+/* 版权信息 */
 .footer .copyright {
-  font-family: MicrosoftYaHei;
-  text-align: center;
-  font-size: 16px;
-  color: #424242;
-  margin-bottom: 57px;
-  line-height: calc(46px + 16px);
+  font-family: MicrosoftYaHei; /* 字体族 */
+  text-align: center; /* 文本居中 */
+  font-size: 16px; /* 字体大小 */
+  color: #424242; /* 字体颜色 */
+  margin-bottom: 57px; /* 底部外边距 */
+  line-height: calc(46px + 16px); /* 行高计算 */
 }
 
 /* end footer */
+
+/* 聊天区域 */
 /* chat start  */
 .chat {
-  position: fixed;
-  top: 317px;
-  right: 0;
-  width: 85px;
-  /* min-height: 300px ; */
-  line-height: 1;
-  z-index: 1;
+  position: fixed; /* 固定定位 */
+  top: 317px; /* 距顶部位置 */
+  right: 0; /* 距右侧0 */
+  width: 85px; /* 宽度 */
+  /* min-height: 300px ; */ /* 最小高度（调试用） */
+  line-height: 1; /* 行高 */
+  z-index: 1; /* 层级 */
 }
 
+/* 聊天列表 */
 .chat .chat-list {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  margin-bottom: 20px; /* 底部外边距 */
 }
 
+/* 聊天列表项 */
 .chat .chat-list li {
-  width: 87px;
-  height: 87px;
-  text-align: center;
-  border: 1px solid #f5f5f5;
-  background-color: #fff;
-  position: relative;
-  margin-bottom: 1px;
+  width: 87px; /* 宽度 */
+  height: 87px; /* 高度 */
+  text-align: center; /* 文本居中 */
+  border: 1px solid #f5f5f5; /* 边框 */
+  background-color: #fff; /* 背景色 */
+  position: relative; /* 相对定位 */
+  margin-bottom: 1px; /* 底部外边距 */
 }
 
+/* 子菜单 */
 .chat .chat-list li .children {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  right: 88px;
-  top: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  display: none;
-  transition: display 3s ease-in-out;
-  background-color: #fff;
+  position: absolute; /* 绝对定位 */
+  width: 180px; /* 宽度 */
+  height: 180px; /* 高度 */
+  right: 88px; /* 距右侧位置 */
+  top: 0; /* 距顶部0 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 阴影 */
+  display: none; /* 默认隐藏 */
+  transition: display 3s ease-in-out; /* 过渡效果 */
+  background-color: #fff; /* 背景色 */
 }
 
+/* 子菜单项 */
 .chat .chat-list li .children .children-item {
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 0; /* 上下内边距 */
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
 }
 
+/* 聊天列表链接 */
 .chat .chat-list li a {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  color: #484848;
-  font-size: 14px;
-  margin-bottom: 18px;
+  display: flex; /* 弹性布局 */
+  justify-content: space-evenly; /* 空间均匀分布 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
+  color: #484848; /* 字体颜色 */
+  font-size: 14px; /* 字体大小 */
+  margin-bottom: 18px; /* 底部外边距 */
 }
 
+/* 聊天列表链接悬停效果 */
 .chat .chat-list li:hover a {
-  color: #ff6700;
+  color: #ff6700; /* 悬停时颜色 */
 }
 
+/* 子菜单显示 */
 .chat .chat-list li:hover .children {
-  display: block;
+  display: block; /* 显示 */
 }
 
+/* 聊天列表图标 */
 .chat .chat-list li a .icon {
-  margin: 13px 0 16px;
-  font-size: 23px;
+  margin: 13px 0 16px; /* 外边距 */
+  font-size: 23px; /* 字体大小 */
 }
 
+/* 返回顶部按钮 */
 .chat .back-top {
-  width: 85px;
-  height: 85px;
-  background-color: #f7f7f7;
-  display: none;
+  width: 85px; /* 宽度 */
+  height: 85px; /* 高度 */
+  background-color: #f7f7f7; /* 背景色 */
+  display: none; /* 默认隐藏 */
 }
+
+/* 返回顶部按钮悬停效果 */
 .chat .back-top:hover {
-  color: #ff6700;
+  color: #ff6700; /* 悬停时颜色 */
+  cursor: pointer; /* 鼠标手型 */
+}
+
+/* 返回顶部项 */
+.chat .back-top .back-item {
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+}
+
+/* 返回顶部图标 */
+.chat .back-top .icon {
+  font-size: 24px; /* 字体大小 */
+  margin: 13px 0 16px; /* 外边距 */
+}
+
+/* end chat */
+.staircase {
+  position: fixed;
+  left: 10px;
+  top: 200px;
+  display: none;
+  z-index: 999;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.staircase ul li {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  /* border-left: 2px solid rgb(170, 170, 170); */
+  color: #a8a7a7;
+  padding-left: 10px;
   cursor: pointer;
 }
-.chat .back-top .back-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.staircase ul li.selected {
+  border-color: rgb(239, 95, 252);
+  color: #fff;
+  background-color: rgb(239, 95, 252);
+  border-radius: 5px;
 }
-.chat .back-top .icon {
-  font-size: 24px;
-  margin: 13px 0 16px;
-}
-/* end chat */
