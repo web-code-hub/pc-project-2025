@@ -1512,7 +1512,7 @@
 /* end chat */
 .staircase {
   position: fixed;
-  left: 10px;
+  left: 0;
   top: 200px;
   display: none;
   z-index: 999;
